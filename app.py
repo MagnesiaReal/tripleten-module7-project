@@ -6,7 +6,7 @@ st.header('Análisis de uso de vehiculos para ventas de coches')
 
 car_data = pd.read_csv('vehicles_us.csv')
 
-hist_button = st.button('Construir histograma')
+hist_button = st.checkbox('Construir histograma')
 
 if hist_button:
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
@@ -14,7 +14,7 @@ if hist_button:
     fig.update_layout(title_text='Distribución del Odómetro')
     st.plotly_chart(fig, use_container_width=True)
 
-scatt_button = st.button('Construir gráfico de dispersión')
+scatt_button = st.checkbox('Construir gráfico de dispersión')
 
 if scatt_button:
     st.write("Creación de un gráfico de dispersión para el conjunto de datos de anuncios de \
